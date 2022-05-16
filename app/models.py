@@ -44,16 +44,16 @@ class User(UserMixin,db.Model):
 class Pitch(db.Model):
     __tablename__ = 'pitches'
 
-    # id = db.Column(db.Integer,primary_key = True)
-    # pitch_title = db.Column(db.String)
-    # pitch_content = db.Column(db.String(1000))
-    # category = db.Column(db.String)
-    # posted = db.Column(db.DateTime,default=datetime.utcnow)
-    # user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
-    # likes = db.Column(db.Integer)
-    # dislikes = db.Column(db.Integer)
+    id = db.Column(db.Integer,primary_key = True)
+    pitch_title = db.Column(db.String)
+    pitch_content = db.Column(db.String(1000))
+    category = db.Column(db.String)
+    posted = db.Column(db.DateTime,default=datetime.utcnow)
+    user_id = db.Column(db.Integer,db.ForeignKey("users.id"))
+    likes = db.Column(db.Integer)
+    dislikes = db.Column(db.Integer)
 
-    # comments = db.relationship('Comment',backref =  'pitch_id',lazy = "dynamic")
+    comments = db.relationship('Comment',backref =  'pitch_id',lazy = "dynamic")
 
     def save_pitch(self):
         db.session.add(self)
@@ -79,7 +79,7 @@ class Pitch(db.Model):
         for pitch in pitches:
             pitches_count += 1
 
-        return pitches
+        return pitches_count
 
 class Comment(db.Model):
     __tablename__ = 'comments'
