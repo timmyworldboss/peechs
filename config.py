@@ -47,7 +47,7 @@ class TestConfig(Config):
     pass
 
 
-class DevConfig(Config):
+class Dev
     
     '''
     Development  configuration child class
@@ -56,7 +56,7 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
 
-    DEBUG = True
+    DEBUG = T
 
 
 
@@ -64,7 +64,7 @@ config_options = {
 
     'development':DevConfig,
     'production':ProdConfig,
-    'test':TestConfig
+    'test':Test
     }    
 
 
