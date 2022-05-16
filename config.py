@@ -56,7 +56,7 @@ class Dev
         Config: The parent configuration class with General configuration settings
     '''
 
-    DEBUG = T
+    DEBUG = True
 
 
 
