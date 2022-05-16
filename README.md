@@ -36,4 +36,4 @@ Click on One Minute Pitch
 
 License
 
-MIT (c) 2022 Timothy N.
+MIT (c) 2022 Timmyworldboss
