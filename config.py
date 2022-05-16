@@ -41,7 +41,7 @@ class ProdConfig(Config):
     pass
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:sicario2793@localhost/pitch_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://timmy:1234@localhost/pitch_test'
 
    
     pass
@@ -64,7 +64,7 @@ config_options = {
 
     'development':DevConfig,
     'production':ProdConfig,
-    'test':TestConfig
+    
     }    
 
 
